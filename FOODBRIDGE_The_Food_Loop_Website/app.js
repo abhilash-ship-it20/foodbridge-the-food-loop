@@ -58,3 +58,18 @@ function initCharts(){
  new Chart(document.getElementById("line1"),{type:"line",data:{labels:["Jun","Jul","Aug","Sep","Oct"],datasets:[{label:"AI predicted",data:[150,330,500,700,1000],tension:.35},{label:"Actual rescue",data:[120,310,470,650,950],tension:.35}]},options:{responsive:true}});
 }
 renderFeed();renderLeaders();initCharts();window.addEventListener("load",()=>{initMap();setQR("FB-QR-1001")});
+// Make functions available to the HTML onclick handlers.
+Object.assign(window, {
+  showSection,
+  filterFeed,
+  renderFeed,
+  openListing,
+  openDirections,
+  useGPS,
+  setQR,
+  verifyQR,
+  openAI,
+  closeAI,
+  sendChat,
+  useGPS
+});
